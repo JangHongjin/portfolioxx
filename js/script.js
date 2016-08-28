@@ -1,20 +1,5 @@
-/*
---------------------------------------------------------
 
-[ INSTA , Javscript ]
 
-  Template Name : INSTA - Responsive Onepage Resume Template
-  
-  Version       :  1.0 
-  
-  Author        :  Pixel_Factory
-  
-  Author URI    :  http://themeforest.net/user/Pixel_Factory
-  
-  Author Email  : h.nafees.anwar@gmail.com
-
---------------------------------------------------------
-*/
 
 /*  ------------------
     Remove Preloader
@@ -242,7 +227,7 @@ $(document).ready(function () {
     /*  -------------
          Contact Form
         ------------- */
-
+    
     $('#contactForm').submit(function () {
         
         $.ajax({
@@ -262,6 +247,58 @@ $(document).ready(function () {
         });
         return false;
     });
+    
+    // //contact form validation
+    // $("#contact-form").validate({
+    //     rules: {
+    //         name: {
+    //             required: true,
+    //             minlength: 2
+    //         },
+    //         message: {
+    //             required: true,
+    //             minlength: 2
+    //         },
+    //         email: {
+    //             required: true,
+    //             email: true
+    //         }
+    //     },
+    //     messages: {
+    //         name: {
+    //             required: "Please enter Your Name",
+    //             minlength: "Your name must consist of at least 2 characters"
+    //         },
+    //         message: {
+    //             required: "Please Write Something",
+    //             minlength: "Your message must consist of at least 2 characters"
+    //         },
+    //         email: "Please enter a valid email address"
+    //     },
+    //     submitHandler: function(form) {
+    //         $(form).ajaxSubmit({
+    //             type:"POST",
+    //             data: $(form).serialize(),
+    //             url:"https://docs.google.com/forms/d/e/1FAIpQLScangnNUZn-Uz-EGthGavoJQ5uaLZau8Ae3CYEZ03bqGtyI3Q/formResponse",
+    //             success: function() {
+    //                 $('#contact-form :input').attr('disabled', 'disabled');
+    //                 $('#contact-form').fadeTo( "slow", 0.15, function() {
+    //                     $(this).find(':input').attr('disabled', 'disabled');
+    //                     $(this).find('label').css('cursor','default');
+    //                     $('#success').fadeIn();
+    //                 });
+    //             },
+    //             error: function() {
+    //                 $('#contact-form :input').attr('disabled', 'disabled');
+    //                 $('#contact-form').fadeTo( "slow", 0.15, function() {
+    //                     $(this).find(':input').attr('disabled', 'disabled');
+    //                     $(this).find('label').css('cursor','default');
+    //                     $('#success').fadeIn();
+    //                 });
+    //             }
+    //         });
+    //     }
+    // });
 
     /*  -------------------------------
          Google Map ( for contact page )
