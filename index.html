@@ -980,28 +980,29 @@
                 
                 <div class="contact-form col-sm-11 clearfix">
                     
-                    <form action="#" id="contact-form" method="post" name="contact-form" target="hidden_iframe" onsubmit="submitted=true;">
+                    <form action="https://docs.google.com/forms/d/e/1FAIpQLSdaSjLHWpV0bt-9_5AQpip8FOWaXETASiNBkxrBa9tK3udHXA/formResponse" id="gform" name="gform" enctype="text/plain" target="hidden_iframe" onsubmit="submitted=true;">
                         <fieldset>
                             <div class="col-sm-12">
-                                <input name="entry.1742714247" id="entry.1742714247" placeholder="Your Name*" type="text" value="" class="form-control">
+                                <input name="entry.1060507801" id="entry.1060507801" placeholder="Your Name*" type="text" value="" class="form-control">
                             </div>
                             
                             <!-- Name Field [ END ] -->
                             
                             <div class="col-sm-12">
-                                <input name="entry.1882661204" id="entry.1882661204" placeholder="Your Email*" type="text" value="" class="form-control">
+                                <input name="entry.1623462710" id="entry.1623462710" placeholder="Your Email*" type="text" value="" class="form-control">
                             </div>
                             
                             <!-- Email Field [ END ] -->
                             
                             <div class="col-xs-12">
-                                <textarea cols="5" name="entry.811051411" id="entry.811051411" placeholder="Your Message....*" class="form-control"></textarea>
+                                <textarea cols="5" name="entry.982740624" id="entry.982740624" placeholder="Your Message....*" class="form-control"></textarea>
                             </div>
                             
                             <!-- Message Field [ END ] -->
                             
                             <div class="col-xs-12">
-                                <button class="submit">SEND</button>
+                                <input type="submit" value="Submit">
+                                
                             </div>
                             
                             <div class="error col-xs-12">
@@ -1014,9 +1015,6 @@
                             <!--    <h3>Success! Your message was sent.</h3>-->
                             <!--</div>-->
                             
-                            <div id="success">
-                    	        <p>발송 받는 부분은 준비중입니다.</p>
-                    	    </div>
                     	    <!--<div id="error">-->
                     	    <!--    <p>Your Message was not sent successfully</p>-->
                     	    <!--</div>-->
@@ -1031,6 +1029,8 @@
                 </div>
             </div>
             
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
             <!--( B ) Google Map -->
             
             <!--<div class="google-map" id="google-map"></div>-->
@@ -1133,12 +1133,14 @@
     <script type="text/javascript" src="library/gMap/jquery.gmap.min.js"></script> 
     <script type="text/javascript" src="js/script.js"></script>
     
+        
+    <script src="assets/js/jquery.min.js"></script>
     <script type="text/javascript">var submitted=false;</script>
-        <script type="text/javascript">
-        $('#gform').on('submit', function(e) {
-          $('#gform *').fadeOut(2000);
-          $('#gform').prepend('Your submission has been processed...');
-          });
+    <script type="text/javascript">
+    $('#gform').on('submit', function(e) {
+      $('#gform *').fadeOut(2000);
+      $('#gform').prepend('Your submission has been processed...');
+      });
     </script>
         
 </body>
